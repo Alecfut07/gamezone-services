@@ -32,6 +32,7 @@ services:
     container_name: db
     restart: always
     environment:
+      - SA_PASSWORD=${SQL_SERVER_PASSWORD}
       - ACCEPT_EULA=Y
     ports:
       - "1433:1433"

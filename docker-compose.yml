@@ -6,8 +6,6 @@ services:
     container_name: web
     depends_on:
       - api
-    env_file:
-      - web.env
     ports:
       - "80:80"
     networks:

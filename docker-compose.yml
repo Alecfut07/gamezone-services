@@ -55,16 +55,16 @@ services:
     volumes:
       - redis-volume:/data
 
-  certbot:
-    image: certbot/certbot:v2.6.0
-    container_name: certbot
-    networks:
-      - datazone-network
-    volumes:
-      - /data/certbot/letsencrypt:/etc/letsencrypt
-      - /data/certbot/www:/tmp/letsencrypt
-      - /data/servers-data/certbot/log:/var/log
-    command: certonly --webroot --agree-tos --email alec.ortega.cisneros@gmail.com -w /tmp/letsencrypt -d alecortega.dev -d www.alecortega.dev
+  # certbot:
+  #   image: certbot/certbot:v2.6.0
+  #   container_name: certbot
+  #   networks:
+  #     - datazone-network
+  #   volumes:
+  #     - /data/certbot/letsencrypt:/etc/letsencrypt
+  #     - /data/certbot/www:/tmp/letsencrypt
+  #     - /data/servers-data/certbot/log:/var/log
+  #   command: certonly --webroot --agree-tos --email alec.ortega.cisneros@gmail.com -w /tmp/letsencrypt -d alecortega.dev -d www.alecortega.dev
 
 networks:
   datazone-network:

@@ -62,7 +62,7 @@ services:
     volumes:
       - ./certbot/conf:/etc/letsencrypt
       - ./certbot/www:/var/www/certbot
-    command: certonly --webroot -w /var/www/certbot alec.ortega.cisneros@gmail.com -d alecortega.dev -d www.alecortega.dev --agree-tos
+    command: certonly --webroot -w /var/www/certbot --email alec.ortega.cisneros@gmail.com -d alecortega.dev -d www.alecortega.dev --agree-tos
 
 networks:
   datazone-network:

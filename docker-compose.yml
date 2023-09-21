@@ -66,6 +66,7 @@ services:
   #     - /data/certbot/www:/tmp/letsencrypt
   #     - /data/servers-data/certbot/log:/var/log
   #   command: certonly --webroot --agree-tos --email alec.ortega.cisneros@gmail.com -w /tmp/letsencrypt -d alecortega.dev -d www.alecortega.dev
+  #   command: certonly --force-renew --webroot --agree-tos --email alec.ortega.cisneros@gmail.com -w /tmp/letsencrypt -d alecortega.dev -d www.alecortega.dev
 
 networks:
   datazone-network:
